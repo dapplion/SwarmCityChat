@@ -1,0 +1,21 @@
+{
+  "name": "swarmcity-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dapplion/SwarmCityChat.git",
+  "author": "swarmcity",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "level": "^4.0.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.0",
+    "socket.io-client": "^2.2.0"
+  }
+}

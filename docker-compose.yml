@@ -1,0 +1,11 @@
+version: "3.4"
+
+volumes:
+  chat_data: {}
+
+services:
+  chat:
+    build: "."
+    restart: always
+    volumes:
+      - "chat_data:/usr/src/app/db"
