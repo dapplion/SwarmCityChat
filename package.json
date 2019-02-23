@@ -6,7 +6,8 @@
   "author": "swarmcity",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "start": "node server"
   },
   "dependencies": {
     "express": "^4.16.4",
