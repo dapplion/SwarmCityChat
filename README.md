@@ -4,6 +4,16 @@ Temporal chat solution while a p2p / decentralized solution is being developed
 
 ## Usage
 
+Connect using the socket.io client to the root domain without any location, with the following options
+
+```js
+const url "http(s)://yourdomain.io"
+const options = {
+  transports: ["websocket"],
+};
+const socket = require("socket.io-client")(url, options);
+```
+
 ### Methods
 
 - subscribe:

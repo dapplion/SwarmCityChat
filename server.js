@@ -1,18 +1,13 @@
-const app = require("express")();
-const server = require("http").Server(app);
-const io = require("socket.io")(server);
+// Init server
+// For this configuration, the socket.io client must connect to "http://yourdomain.io" without location
+// Since there is not going to be any other WS client in the same server, it's ok
+const port = process.env.PORT || 3000;
+const io = require("socket.io")(port);
+console.log(`App listening at port ${port}`);
 // Utils
 const wrapErrors = require("./utils/wrapErrors");
 const updateChat = require("./utils/updateChat");
 const getId = require("./utils/getId");
-
-const port = process.env.PORT || 3000;
-
-// Init server
-server.listen(port);
-console.log(`App listening at port ${port}`);
-
-app.get("/", (_, res) => res.send("Swarm City chat service"));
 
 io.on("connection", socket => {
   console.log(`Socket id ${socket.id} connected`);
@@ -59,5 +54,3 @@ io.on("connection", socket => {
     })
   );
 });
-
-module.exports = server; // for testing
