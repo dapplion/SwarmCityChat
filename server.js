@@ -12,6 +12,8 @@ const port = process.env.PORT || 3000;
 server.listen(port);
 console.log(`App listening at port ${port}`);
 
+app.get("/", (_, res) => res.send("Swarm City chat service"));
+
 io.on("connection", socket => {
   console.log(`Socket id ${socket.id} connected`);
   socket.on(
